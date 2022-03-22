@@ -1,0 +1,21 @@
+﻿<fw:AcrylicWindow  xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF" 
+                   x:Class="FiremonSystray.NotificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FiremonSystray"
+                   Loaded="AcrylicWindow_Loaded"
+        mc:Ignorable="d"  WindowStyle="None"
+        SizeToContent="WidthAndHeight"
+        Title="Erneut starten?" Height="87" Width="335" ResizeMode="NoResize" ShowInTaskbar="False" Icon="Ressourcen/firemon-112-logo-v2.png" >
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="8">
+            <TextBlock TextWrapping="Wrap">Der Firemon Monitor wurde geschlossen.<LineBreak></LineBreak> Möchten Sie den Firmon Monitor wieder öffnen?</TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="Close" Click="Close_Click" Padding="4" Margin="0,8,0,0" Style="{StaticResource ButtonRevealStyle}" Content="Schließen" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="29" Width="85"/>
+                <Button x:Name="Reopen" Click="Reopen_Click" Padding="8,4,8,4" Margin="8,8,0,0" Style="{StaticResource ButtonRevealStyle}" Content="Firemon öffnen" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="29"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</fw:AcrylicWindow>
